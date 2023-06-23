@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinar un numero entre 1-100</title>
+</head>
+
+<body>
+
+    <h1>Juego para adivinar un numero entre 1 y 100</h1>
+
+    <script>
+        let maxIntentos = 5;
+        let valorEscondido = Math.ceil(Math.random() * 100); //randome entre 1-100
+        let intentos = 0;
+        let flagGanado = false;
+
+        while (intentos < maxIntentos) {
+
+
+            ////pedir el numero al user
+            ///prompt
+            let numero = prompt("Introduce un numero");
+
+            numero = parseInt(numero);
+            if (isNaN(numero)) { // si 
+                //volver a preguntar....
+                console.log("No es numero, vuelve a intentar!");
+                continue;
+            }
+
+            intentos++;
+            console.log(numero);
+
+            if (numero === valorEscondido) {
+                flagGanado = true;
+                break;
+            }
+
+            //dar tips.. si se ha pasado??
+            if (numero > valorEscondido) {
+                console.log("Te has pasado...");
+            } else {
+                console.log("Te has quedado por debajo ");
+            }
+
+            console.log("Te quedan " + (maxIntentos - intentos) + " intentos");
+
+
+        }
+
+        if (flagGanado) {
+            alert("FELICIDADES!!!!");
+        } else {
+            alert("WUA JA JA AJ A!! HAS PERDIDO!!! \n\nEl valor era: " + valorEscondido);
+        }
+
+
+
+
+        //mientras... no adivinemos o no llegemos al maximo de intentos...
+
+
+
+    </script>
+
+</body>
+
+</html>

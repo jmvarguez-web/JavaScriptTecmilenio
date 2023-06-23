@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Control de Flujo con JavaScript – [Jesus Manuel Varguez Basto]</title>
+</head>
+
+<body>
+    <h1>“Curso JavaScript”</h1>
+    <p> “Control de Flujo” </p>
+    <script>
+
+        try {
+
+
+            let numero1 = parseInt(prompt('Introduce el primer número', 0));
+            console.log(numero1);
+            let numero2 = parseInt(prompt('Introduce el segundo número', 0));
+            console.log(numero2);
+
+            if ((numero1 <= 0 || numero2 <= 0) || (isNaN(numero1) || isNaN(numero2))) {
+                alert("No es numérico");
+            } else {
+
+
+
+                if (numero1 === numero2) {
+                    alert("LOS NÚMEROS SON IGUALES");
+                } else if (numero1 > numero2) {
+                    alert("EL NÚMERO MAYOR ES" + numero1 + "\n" + "EL NÚMERO MENOR ES" + numero2);
+
+                } else if (numero2 > numero1) {
+                    alert("EL NÚMERO MENOR ES" + numero2 + "\n" + "EL NÚMERO MAYOR ES" + numero1);
+
+                } else {
+                    alert("INTRODUCE NÚMEROS CORRECTOS");
+                }
+            }
+
+        } catch (error) {
+
+        }
+    </script>
+</body>
+
+</html>
