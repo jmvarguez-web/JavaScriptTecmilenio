@@ -58,11 +58,10 @@ function factorial(numero) {
     console.log(`El factorial del número ${numero} es ${factorial}`);
   }
 }
-
-// factorial(0);
-//factorial("5");
-// factorial(1,2,3);
-// factorial(0);
-// factorial(-5);
-// factorial(5);
-//factorial(8);
+//let n = Number(prompt("Dame un numero"));
+factorial("5");
+factorial(1, 2, 3);
+factorial(0);
+factorial(-5);
+factorial(5);
+factorial(8);

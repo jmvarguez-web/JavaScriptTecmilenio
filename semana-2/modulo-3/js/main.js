@@ -63,14 +63,15 @@ sumame(2, 4);
 // d. En el cuarto parámetro ingresa una función anónima que recibe como parámetro resultado y lo que hará es mandar a la consola 'La suma por
 // dos es:', resultado.
 
-function sumameDos(a, b, callback, callbackporDos) {
+const sumameDos = (a, b, callback, callbackporDos) => {
   let suma = a + b;
   callback(suma);
   callbackporDos(suma);
-}
+};
 
-let sumaYmuestra = (resultado) => console.log("La suma es: " + resultado);
+const sumaYmuestra = (resultado) => console.log("La suma es: " + resultado);
 
-let sumaPorDos = (resultado) => console.log("La suma por dos es: " + resultado);
+const sumaPorDos = (resultado) =>
+  console.log("La suma por dos es: " + resultado);
 
 sumameDos(2, 4, sumaYmuestra, sumaPorDos);

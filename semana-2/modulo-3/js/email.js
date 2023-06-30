@@ -9,8 +9,8 @@
 //          ingresado NO es una cadena de texto’.
 //          c. Declara una variable expReg e iguálala a una expresión regular:
 
-let validarEmail = (email = "") => {
-  if (!email) {
+let validarEmail = (email) => {
+  if (!email) { //pueder ser indefinido o vcio
     console.warn("No ingresaste un email");
     return false;
   } else if (typeof email == "string") {
@@ -29,7 +29,7 @@ let validarEmail = (email = "") => {
   }
 };
 
-//validarEmail();
-//validarEmail(34);
+validarEmail();
+validarEmail(34);
 validarEmail("usuario.apellido@univeridad");
-//validarEmail("nombre_apellido@universidad.edu");
+validarEmail("nombre_apellido@universidad.edu");
