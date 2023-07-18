@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!-- <script src="./js/main2.js"></script> -->
+
+
+    <script>
+        //Adivinar una palabra
+        let maximoDeOportunidads = 3;
+        let palabras = ['Tecmilenio', 'CODI', 'Javascript'];
+        let palabra = palabras[2];
+        let difuso = [];
+
+        function mandarLetra(letra) {
+            //buscar la letra dentro de la palabra
+            for (i = 0; i < palabra.length; i++) {
+                //la encontramos
+                if (palabra[i].toUpperCase() == letra.toUpperCase()) {
+                    difuso[i] = letra;
+                }
+            }
+            mostrarPalabraDifusa();
+            //maximoDeOportunidads--;
+            if (maximoDeOportunidads <= 0) {
+                alert("HAS PERDIDO ");
+            }
+
+        }
+
+        function mostrarPalabraDifusa() {
+            //difuso
+            console.log(difuso);
+        }
+
+        for (i = 0; i < palabra.length; i++) {
+            difuso.push("_");
+        }
+
+
+    </script>
+</body>
+
+</html>

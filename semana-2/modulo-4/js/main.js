@@ -32,10 +32,10 @@ console.log(juego.opciones);
 
 const pedirNuevoNombre = () => {
   let nombre = prompt("Por favor, ingresa tu nombre:");
-  return nombre;
+
+  cambiarNombre(nombre);
 };
 
-let nombreUsuario = pedirNuevoNombre();
 // stablecido. La expresión regular /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]+/ tiene las siguientes características:
 //
 // (?=.*[a-zA-Z]): Utiliza una lookahead assertion para asegurarse de que el nombre contenga al menos una letra.
@@ -176,8 +176,8 @@ const main = () => {
 };
 
 // Ejemplo de uso de la función principal
+pedirNuevoNombre();
 
-cambiarNombre(nombreUsuario);
 console.log("¡Que comience el juego!");
 
 main();

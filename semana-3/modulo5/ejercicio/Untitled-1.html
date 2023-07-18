@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+    <link href="css/todolist.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="todo-container">
+        <h1>TODO List</h1>
+        <ul class="todo-list">
+            <li class="todo-item">
+                <input type="checkbox">
+                <label>Ejemplo 01</label>
+                <button>Delete</button>
+            </li>
+        </ul>
+        <form id="addTodoForm">
+            <input type="text" id="todoInput" placeholder="Add new task..." />
+            <button type="submit">Add</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
+
+Juan Miguel Castaños a Todos 8:40 PM
+------
+<script>
+    const addTodoForm = document.getElementById("addTodoForm");
+    const todoInput = document.getElementById("todoInput");
+    const todoList = document.querySelector(".todo-list");
+
+    addTodoForm.addEventListener('submit', function (evento) {
+        //alert("formulario enviado");
+        evento.preventDefault();
+
+        //obtener lo del input
+        const textoCaja = (todoInput.value).trim();
+
+        //validar
+        if (textoCaja === "") {
+            alert("Introduce un valor.");
+            return; // no continuar!!!
+        }
+        const li = document.createElement("li");
+        const input = document.createElement("input");
+        const label = document.createElement("label");
+        const button = document.createElement("button");
+
+        input.type = "checkbox";
+
+        const nodoLabel = document.createTextNode(textoCaja);
+        label.appendChild(nodoLabel);
+
+        button.textContent = "Delete";
+        li.className = "todo-item"
+
+        li.appendChild(input);
+        li.appendChild(label);
+        li.appendChild(button);
+
+        todoList.appendChild(li);
+
+        todoInput.value = '';
+
+        console.log(li, input, label, button)
+
+    })
+
+
+</script>
